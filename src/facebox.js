@@ -281,10 +281,12 @@
   function hideOverlay() {
     if ($.facebox.skipOverlay()) return
 
-    $('#facebox_overlay').fadeOut(200, function(){
-      $("#facebox_overlay").removeClass("facebox_overlayBG")
-      $("#facebox_overlay").addClass("facebox_hide")
-      $("#facebox_overlay").remove()
+    var overlay = $('#facebox_overlay');
+
+    overlay.fadeOut(200, function(){
+      overlay.removeClass("facebox_overlayBG")
+      overlay.addClass("facebox_hide")
+      overlay.remove()
     })
 
     return false
